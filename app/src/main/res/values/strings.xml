@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">LearnKotlin</string>
+    <string name="roll">roll</string>
+    <string name="dice_app">DICE APP</string>
 </resources>
