@@ -1,5 +1,17 @@
 <resources>
     <string name="app_name">LearnKotlin</string>
     <string name="roll">roll</string>
-    <string name="dice_app">DICE APP</string>
+    <string name="dice_app_name">DICE APP</string>
+    <string name="hello_world">helloworld</string>
+    <string name="color_my_view_app_box_one">BOX ONE</string>
+    <string name="color_my_view_app_box_two">BOX TWO</string>
+    <string name="color_my_view_app_box_three">BOX THREE</string>
+    <string name="color_my_view_app_box_four">BOX FOUR</string>
+    <string name="color_my_view_app_box_five">BOX FIVE</string>
+    <string name="color_my_view_app_name">COLOR MY VIEW</string>
+    <string name="color_my_view_app_how_to_play_button">How to play:</string>
+    <string name="color_my_view_app_tap_box_and_button">Tap the Screen and Buttons</string>
+    <string name="color_my_view_app_red_button">RED</string>
+    <string name="color_my_view_app_yellow_button">YELLOW</string>
+    <string name="color_my_view_app_green_button">GREEN</string>
 </resources>
