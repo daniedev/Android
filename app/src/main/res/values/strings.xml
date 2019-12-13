@@ -14,4 +14,15 @@
     <string name="color_my_view_app_red_button">RED</string>
     <string name="color_my_view_app_yellow_button">YELLOW</string>
     <string name="color_my_view_app_green_button">GREEN</string>
+
+    <string name="android_trivia_app_name">ANDROID TRIVIA</string>
+    <string name="android_trivia_text_second_fragment">This is Second Fragment</string>
+
+
+
+    <string name="common_welcome">Welcome!!!</string>
+    <string name="common_play">PLAY</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+
 </resources>
