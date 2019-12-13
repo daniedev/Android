@@ -5,20 +5,21 @@ import android.widget.Button
 import android.widget.ImageView
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
+import androidx.databinding.DataBindingUtil
 import com.mobileapp.learnkotlin.R
+import com.mobileapp.learnkotlin.databinding.ActivityDiceAppBinding
 import kotlin.random.Random
 
 class DiceAppActivity : AppCompatActivity() {
 
     lateinit var numberToBeDisplayed: ImageView
+    lateinit var binding: ActivityDiceAppBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_dice_app)
-
-        val button: Button = findViewById(R.id.roll_button)
-        numberToBeDisplayed = findViewById(R.id.number_to_be_displayed)
-        button.setOnClickListener { rollDice() }
+        binding = DataBindingUtil.setContentView(this, R.layout.activity_dice_app)
+        numberToBeDisplayed = binding.numberToBeDisplayed
+        binding.rollButton.setOnClickListener{rollDice()}
     }
 
     private fun rollDice() {
@@ -37,6 +38,5 @@ class DiceAppActivity : AppCompatActivity() {
     private fun generateRandomNumber(): Int {
         return Random.nextInt(6) + 1
     }
-
 
 }
