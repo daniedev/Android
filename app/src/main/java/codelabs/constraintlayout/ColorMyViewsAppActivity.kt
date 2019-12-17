@@ -3,29 +3,32 @@ package codelabs.constraintlayout
 import android.graphics.Color
 import android.os.Bundle
 import android.view.View
-import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
+import androidx.databinding.DataBindingUtil
 import com.mobileapp.learnkotlin.R
+import com.mobileapp.learnkotlin.databinding.ActivityColorMyViewsAppBinding
 import kotlinx.android.synthetic.main.activity_color_my_views_app.*
 
 class ColorMyViewsAppActivity : AppCompatActivity() {
 
+    lateinit var binding: ActivityColorMyViewsAppBinding
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_color_my_views_app)
+        binding = DataBindingUtil.setContentView(this,R.layout.activity_color_my_views_app)
         setListener()
     }
 
     private fun setListener() {
-        val boxOne = findViewById<TextView>(R.id.color_my_view_box_1)
-        val boxTwo = findViewById<TextView>(R.id.color_my_view_box_2)
-        val boxThree = findViewById<TextView>(R.id.color_my_view_box_3)
-        val boxFour = findViewById<TextView>(R.id.color_my_view_box_4)
-        val boxFive = findViewById<TextView>(R.id.color_my_view_box_5)
-        val appLayout = findViewById<View>(R.id.color_my_app_layout)
-        val redButton = findViewById<View>(R.id.color_my_view_red_button)
-        val yellowButton = findViewById<View>(R.id.color_my_view_yellow_button)
-        val greenButton = findViewById<View>(R.id.color_my_view_green_button)
+        val boxOne = binding.colorMyViewBox1
+        val boxTwo = binding.colorMyViewBox2
+        val boxThree = binding.colorMyViewBox3
+        val boxFour = binding.colorMyViewBox4
+        val boxFive = binding.colorMyViewBox5
+        val appLayout = binding.colorMyAppLayout
+        val redButton = binding.colorMyViewRedButton
+        val yellowButton = binding.colorMyViewYellowButton
+        val greenButton = binding.colorMyViewGreenButton
 
         val clickableViews: List<View> =
             listOf(
