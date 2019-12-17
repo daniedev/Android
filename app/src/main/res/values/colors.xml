@@ -7,4 +7,9 @@
     <color name="my_red">#E54304</color>
     <color name="my_yellow">#FFC107</color>
 
+    <!-- android trivia colors -->
+    <color name="android_trivia_youWinDark">#35A571</color>
+    <color name="android_trivia_youWinBackground">#B7F8C9</color>
+    <color name="android_trivia_gameOverBackground">#f8bbd0</color>
+
 </resources>
