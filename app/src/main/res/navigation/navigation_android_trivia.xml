@@ -6,6 +6,15 @@
     app:startDestination="@id/titleFragment">
 
     <fragment
+        android:id="@+id/aboutFragment"
+        android:name="codelabs.androidtrivia.AboutFragment"
+        android:label="AboutFragment"
+        tools:layout="@layout/fragment_about">
+
+
+    </fragment>
+
+    <fragment
         android:id="@+id/titleFragment"
         android:name="codelabs.androidtrivia.TitleFragment"
         android:label="TitleFragment"
