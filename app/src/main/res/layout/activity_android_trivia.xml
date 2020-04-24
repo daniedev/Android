@@ -15,7 +15,7 @@
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            tools:context="codelabs.androidtrivia.AndroidTriviaActivity">
+            tools:context="com.mobileapp.learnkotlin.codelabs.androidtrivia.AndroidTriviaActivity">
 
             <fragment
                 android:id="@+id/triva_nav_host_fragment"

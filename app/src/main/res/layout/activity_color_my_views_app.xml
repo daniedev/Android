@@ -11,7 +11,7 @@
         android:id="@+id/color_my_app_layout"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:context="codelabs.constraintlayout.ColorMyViewsAppActivity">
+        tools:context="com.mobileapp.learnkotlin.codelabs.constraintlayout.ColorMyViewsAppActivity">
 
         <TextView
             android:id="@+id/color_my_view_box_1"

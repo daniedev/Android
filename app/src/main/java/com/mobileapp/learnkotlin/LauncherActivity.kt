@@ -5,9 +5,9 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
 import androidx.databinding.DataBindingUtil
-import codelabs.androidtrivia.AndroidTriviaActivity
-import codelabs.constraintlayout.ColorMyViewsAppActivity
-import codelabs.diceapp.DiceAppActivity
+import com.mobileapp.learnkotlin.codelabs.androidtrivia.AndroidTriviaActivity
+import com.mobileapp.learnkotlin.codelabs.constraintlayout.ColorMyViewsAppActivity
+import com.mobileapp.learnkotlin.codelabs.diceapp.DiceAppActivity
 import com.mobileapp.learnkotlin.databinding.ActivityLauncherBinding
 
 class LauncherActivity : AppCompatActivity() {

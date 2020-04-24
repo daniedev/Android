@@ -9,8 +9,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name="codelabs.androidtrivia.AndroidTriviaActivity"></activity>
-        <activity android:name="codelabs.constraintlayout.ColorMyViewsAppActivity" />
+        <activity android:name="com.mobileapp.learnkotlin.codelabs.androidtrivia.AndroidTriviaActivity"></activity>
+        <activity android:name="com.mobileapp.learnkotlin.codelabs.constraintlayout.ColorMyViewsAppActivity" />
         <activity android:name=".LauncherActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -18,7 +18,7 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name="codelabs.diceapp.DiceAppActivity" />
+        <activity android:name="com.mobileapp.learnkotlin.codelabs.diceapp.DiceAppActivity" />
 
         <meta-data
             android:name="preloaded_fonts"

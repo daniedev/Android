@@ -1,4 +1,4 @@
-package codelabs.androidtrivia
+package com.mobileapp.learnkotlin.codelabs.androidtrivia
 
 
 import android.os.Bundle

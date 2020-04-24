@@ -1,4 +1,4 @@
-package codelabs.diceapp
+package com.mobileapp.learnkotlin.codelabs.diceapp
 
 import android.os.Bundle
 import android.widget.ImageView
