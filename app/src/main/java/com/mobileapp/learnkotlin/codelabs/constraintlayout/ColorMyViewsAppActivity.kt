@@ -1,4 +1,4 @@
-package codelabs.constraintlayout
+package com.mobileapp.learnkotlin.codelabs.constraintlayout
 
 import android.graphics.Color
 import android.os.Bundle

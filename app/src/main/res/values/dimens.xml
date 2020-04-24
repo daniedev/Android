@@ -2,4 +2,16 @@
 <resources>
     <dimen name="margin_wide">16dp</dimen>
     <dimen name="box_text_size">24dp</dimen>
+
+    <!-- android trivia dimens -->
+    <dimen name="android_trivia_vertical_margin">16dp</dimen>
+    <dimen name="android_trivia_horizontal_margin">8dp</dimen>
+    <dimen name="android_trivia_button_padding">16dp</dimen>
+    <dimen name="android_trivia_button_text_size">18sp</dimen>
+    <dimen name="android_trivia_question_horizontal_margin">32dp</dimen>
+    <dimen name="android_trivia_question_vertical_margin">8dp</dimen>
+    <dimen name="android_trivia_answer_text_size">18sp</dimen>
+    <dimen name="android_trivia_question_text_size">30sp</dimen>
+    <dimen name="android_trivia_image_header_height">192dp</dimen>
+    <dimen name="android_trivia_game_over_height">350dp</dimen>
 </resources>

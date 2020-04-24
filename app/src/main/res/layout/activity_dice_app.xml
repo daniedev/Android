@@ -12,7 +12,7 @@
         android:layout_height="wrap_content"
         android:orientation="vertical"
         android:layout_gravity="center_vertical"
-        tools:context="codelabs.diceapp.DiceAppActivity">
+        tools:context="com.mobileapp.learnkotlin.codelabs.diceapp.DiceAppActivity">
 
         <ImageView
             android:id="@+id/number_to_be_displayed"

@@ -26,3 +26,9 @@ allprojects {
 task clean(type: Delete) {
     delete rootProject.buildDir
 }
+
+ext {
+    navigationVersion = '1.0.0-rc02'
+    supportlibVersion = '1.0.0-alpha3'
+}
+
