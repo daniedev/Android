@@ -4,7 +4,6 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
-import android.widget.Button
 import androidx.databinding.DataBindingUtil
 import codelabs.androidtrivia.AndroidTriviaActivity
 import codelabs.constraintlayout.ColorMyViewsAppActivity
@@ -13,17 +12,11 @@ import com.mobileapp.learnkotlin.databinding.ActivityLauncherBinding
 
 class LauncherActivity : AppCompatActivity() {
 
-    lateinit var diceApp : Button
-    lateinit var colorMyViewApp : Button
-    lateinit var androidTriviaApp : Button
     lateinit var binding : ActivityLauncherBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = DataBindingUtil.setContentView(this,R.layout.activity_launcher)
-        diceApp = binding.diceAppLaunchButton
-        colorMyViewApp = binding.colorMyViewAppLaunchButton
-        androidTriviaApp = binding.diceAppLaunchButton
     }
 
     fun navigateToNextPage(view: View) {

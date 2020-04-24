@@ -6,12 +6,10 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.TextView
 import androidx.databinding.DataBindingUtil
 import androidx.navigation.findNavController
 import com.mobileapp.learnkotlin.R
 import com.mobileapp.learnkotlin.databinding.FragmentGameOverBinding
-import com.mobileapp.learnkotlin.databinding.FragmentTitleBinding
 
 /**
  * A simple [Fragment] subclass.
