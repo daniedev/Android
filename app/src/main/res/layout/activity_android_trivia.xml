@@ -7,19 +7,33 @@
 
     </data>
 
-    <androidx.constraintlayout.widget.ConstraintLayout
+    <androidx.drawerlayout.widget.DrawerLayout
+        android:id="@+id/drawerLayout"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        tools:context="codelabs.androidtrivia.AndroidTriviaActivity">
+        android:layout_height="match_parent">
 
-        <fragment
+        <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:name="androidx.navigation.fragment.NavHostFragment"
-            android:id="@+id/triva_nav_host_fragment"
-            app:navGraph = "@navigation/navigation_android_trivia"
-            app:defaultNavHost = "true"
-            />
+            tools:context="codelabs.androidtrivia.AndroidTriviaActivity">
 
-    </androidx.constraintlayout.widget.ConstraintLayout>
+            <fragment
+                android:id="@+id/triva_nav_host_fragment"
+                android:name="androidx.navigation.fragment.NavHostFragment"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:defaultNavHost="true"
+                app:navGraph="@navigation/navigation_android_trivia" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <com.google.android.material.navigation.NavigationView
+            android:id="@+id/navView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="start"
+            app:headerLayout="@layout/nav_header"
+            app:menu="@menu/trivia_navdrawer_menu"/>
+
+    </androidx.drawerlayout.widget.DrawerLayout>
 </layout>

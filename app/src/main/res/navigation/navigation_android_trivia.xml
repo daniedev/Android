@@ -10,8 +10,13 @@
         android:name="codelabs.androidtrivia.AboutFragment"
         android:label="AboutFragment"
         tools:layout="@layout/fragment_about">
+    </fragment>
 
-
+    <fragment
+        android:id="@+id/rulesFragment"
+        android:name="codelabs.androidtrivia.RulesFragment"
+        android:label="RulesFragment"
+        tools:layout="@layout/fragment_rules">
     </fragment>
 
     <fragment
