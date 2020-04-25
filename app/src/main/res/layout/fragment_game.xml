@@ -23,7 +23,7 @@
 
         <variable
             name="game"
-            type="com.mobileapp.learnkotlin.codelabs.androidtrivia.GameFragment" />
+            type="com.mobileapp.learnkotlin.codelabs.androidtrivia.screens.GameFragment" />
     </data>
 
     <ScrollView

@@ -1,4 +1,4 @@
-package com.mobileapp.learnkotlin.codelabs.androidtrivia
+package com.mobileapp.learnkotlin.codelabs.androidtrivia.screens
 
 
 import android.content.Intent
@@ -33,7 +33,10 @@ class GameWonFragment : Fragment() {
             view.findNavController()
                 .navigate(GameWonFragmentDirections.actionGameWonFragmentToGameFragment())
         }
-        val args = GameWonFragmentArgs.fromBundle(arguments!!)
+        val args =
+            GameWonFragmentArgs.fromBundle(
+                arguments!!
+            )
         Toast.makeText(
             context,
             "NumCorrect : ${args.numCorrect}, NumQuestions : ${args.numQuestions}",
@@ -59,7 +62,10 @@ class GameWonFragment : Fragment() {
     }
 
     private fun getShareIntent(): Intent {
-        val args = GameWonFragmentArgs.fromBundle(arguments!!)
+        val args =
+            GameWonFragmentArgs.fromBundle(
+                arguments!!
+            )
         val shareIntent = Intent(Intent.ACTION_SEND)
         shareIntent.setType("text/plain").putExtra(
             Intent.EXTRA_TEXT,

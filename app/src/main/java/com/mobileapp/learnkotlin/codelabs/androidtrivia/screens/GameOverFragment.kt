@@ -1,4 +1,4 @@
-package com.mobileapp.learnkotlin.codelabs.androidtrivia
+package com.mobileapp.learnkotlin.codelabs.androidtrivia.screens
 
 
 import android.os.Bundle
@@ -22,7 +22,9 @@ class GameOverFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
 
         binding = DataBindingUtil.inflate<FragmentGameOverBinding>(inflater,R.layout.fragment_game_over,container,false)
-        binding.tryAgainButton.setOnClickListener { view: View -> view.findNavController().navigate(GameOverFragmentDirections.actionGameOverFragmentToGameFragment()) }
+        binding.tryAgainButton.setOnClickListener { view: View -> view.findNavController().navigate(
+            GameOverFragmentDirections.actionGameOverFragmentToGameFragment()
+        ) }
         return binding.root
     }
 
