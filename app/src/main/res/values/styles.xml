@@ -17,4 +17,17 @@
         <item name="android:textStyle">bold</item>
     </style>
 
+    <!--Guess The Word Button Styles -->
+    <style name="GoButton" parent="Widget.AppCompat.Button.Colored">
+        <item name="colorButtonNormal">@color/guess_the_word_ok_green_color</item>
+        <item name="colorControlHighlight">@color/guess_the_word_selected_green_color</item>
+        <item name="android:textColor">@color/guess_the_word_white_text_color</item>
+        <item name="colorAccent">@color/guess_the_word_selected_green_color</item>
+    </style>
+
+    <style name="SkipButton" parent="Widget.AppCompat.Button.Colored">
+        <item name="android:buttonStyle">@style/Widget.AppCompat.Button.Borderless.Colored</item>
+        <item name="android:textColor">@color/guess_the_word_grey_button_color</item>
+        <item name="colorControlHighlight">@color/guess_the_word_skip_red_color</item>
+    </style>
 </resources>
