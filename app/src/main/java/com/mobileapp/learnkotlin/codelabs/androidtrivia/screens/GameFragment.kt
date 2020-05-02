@@ -10,12 +10,13 @@ import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.Fragment
 import androidx.navigation.findNavController
 import com.mobileapp.learnkotlin.R
-import com.mobileapp.learnkotlin.databinding.FragmentGameBinding
+import com.mobileapp.learnkotlin.databinding.FragmentGameAndroidTriviaBinding
 
 class GameFragment : Fragment() {
     data class Question(
         val text: String,
-        val answers: List<String>)
+        val answers: List<String>
+    )
 
     // The first answer is the correct one.  We randomize the answers before showing the text.
     // All questions must have four answers.  We'd want these to contain references to string
@@ -74,18 +75,20 @@ class GameFragment : Fragment() {
     )
 
 
-
     lateinit var currentQuestion: Question
     lateinit var answers: MutableList<String>
     private var questionIndex = 0
     private val numQuestions = Math.min((questions.size + 1) / 2, 3)
 
-    override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?,
-                              savedInstanceState: Bundle?): View? {
+    override fun onCreateView(
+        inflater: LayoutInflater, container: ViewGroup?,
+        savedInstanceState: Bundle?
+    ): View? {
 
         // Inflate the layout for this fragment
-        val binding = DataBindingUtil.inflate<FragmentGameBinding>(
-            inflater, R.layout.fragment_game, container, false)
+        val binding = DataBindingUtil.inflate<FragmentGameAndroidTriviaBinding>(
+            inflater, R.layout.fragment_game_android_trivia, container, false
+        )
 
         // Shuffles the questions and sets the question index to the first question.
         randomizeQuestions()
@@ -125,7 +128,8 @@ class GameFragment : Fragment() {
                     }
                 } else {
                     // Game over! A wrong answer sends us to the gameOverFragment.
-                    view.findNavController().navigate(GameFragmentDirections.actionGameFragmentToGameOverFragment())
+                    view.findNavController()
+                        .navigate(GameFragmentDirections.actionGameFragmentToGameOverFragment())
                 }
             }
         }
@@ -147,6 +151,10 @@ class GameFragment : Fragment() {
         answers = currentQuestion.answers.toMutableList()
         // and shuffle them
         answers.shuffle()
-        (activity as AppCompatActivity).supportActionBar?.title = getString(R.string.android_trivia_title_android_trivia_question, questionIndex + 1, numQuestions)
+        (activity as AppCompatActivity).supportActionBar?.title = getString(
+            R.string.android_trivia_title_android_trivia_question,
+            questionIndex + 1,
+            numQuestions
+        )
     }
 }

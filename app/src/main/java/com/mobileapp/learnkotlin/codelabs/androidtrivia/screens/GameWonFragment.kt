@@ -9,23 +9,23 @@ import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.Fragment
 import androidx.navigation.findNavController
 import com.mobileapp.learnkotlin.R
-import com.mobileapp.learnkotlin.databinding.FragmentGameWonBinding
+import com.mobileapp.learnkotlin.databinding.FragmentGameWonAndroidTriviaBinding
 
 /**
  * A simple [Fragment] subclass.
  */
 class GameWonFragment : Fragment() {
 
-    lateinit var binding: FragmentGameWonBinding
+    lateinit var binding: FragmentGameWonAndroidTriviaBinding
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        binding = DataBindingUtil.inflate<FragmentGameWonBinding>(
+        binding = DataBindingUtil.inflate(
             inflater,
-            R.layout.fragment_game_won,
+            R.layout.fragment_game_won_android_trivia,
             container,
             false
         )

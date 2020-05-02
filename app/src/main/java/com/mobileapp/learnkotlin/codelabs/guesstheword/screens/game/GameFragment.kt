@@ -10,11 +10,11 @@ import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProviders
 import androidx.navigation.fragment.findNavController
 import com.mobileapp.learnkotlin.R
-import com.mobileapp.learnkotlin.databinding.GameFragmentBinding
+import com.mobileapp.learnkotlin.databinding.FragmentGameGuessTheWordBinding
 
 class GameFragment : Fragment() {
 
-    private lateinit var binding: GameFragmentBinding
+    private lateinit var binding: FragmentGameGuessTheWordBinding
     private lateinit var viewModel: GameViewModel
 
     override fun onCreateView(
@@ -25,7 +25,7 @@ class GameFragment : Fragment() {
         // Inflate view and obtain an instance of the binding class
         binding = DataBindingUtil.inflate(
             inflater,
-            R.layout.game_fragment,
+            R.layout.fragment_game_guess_the_word,
             container,
             false
         )

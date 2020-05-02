@@ -8,7 +8,7 @@ import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProviders
 import com.mobileapp.learnkotlin.R
-import com.mobileapp.learnkotlin.databinding.ScoreFragmentBinding
+import com.mobileapp.learnkotlin.databinding.FragmentScoreGuessTheWordBinding
 
 
 /**
@@ -26,9 +26,9 @@ class ScoreFragment : Fragment() {
     ): View? {
 
         // Inflate view and obtain an instance of the binding class.
-        val binding: ScoreFragmentBinding = DataBindingUtil.inflate(
+        val binding: FragmentScoreGuessTheWordBinding = DataBindingUtil.inflate(
             inflater,
-            R.layout.score_fragment,
+            R.layout.fragment_score_guess_the_word,
             container,
             false
         )
