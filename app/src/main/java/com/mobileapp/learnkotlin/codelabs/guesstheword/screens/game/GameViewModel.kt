@@ -1,15 +1,18 @@
 package com.mobileapp.learnkotlin.codelabs.guesstheword.screens.game
 
 import android.util.Log
+import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 
 class GameViewModel : ViewModel() {
 
-    var word = ""
-    var score = 0
+    var word = MutableLiveData<String>()
+    var score = MutableLiveData<Int>()
     private lateinit var wordList: MutableList<String>
 
     init {
+        word.value = ""
+        score.value = 0
         Log.i("GameViewModel", "GameViewModel Created!!")
         resetList()
         nextWord()
@@ -43,18 +46,18 @@ class GameViewModel : ViewModel() {
     }
 
     fun onSkip() {
-        score--
+        score.value = (score.value)?.minus(1)
         nextWord()
     }
 
     fun onCorrect() {
-        score++
+        score.value = (score.value)?.plus(1)
         nextWord()
     }
 
     private fun nextWord() {
         if (wordList.isNotEmpty()) {
-            word = wordList.removeAt(0)
+            word.value = wordList.removeAt(0)
         }
     }
 
