@@ -6,7 +6,9 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.Fragment
+import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProviders
+import androidx.navigation.fragment.findNavController
 import com.mobileapp.learnkotlin.R
 import com.mobileapp.learnkotlin.databinding.FragmentScoreGuessTheWordBinding
 
@@ -34,7 +36,18 @@ class ScoreFragment : Fragment() {
         )
         viewModelFactory = ScoreViewModelFactory(ScoreFragmentArgs.fromBundle(arguments!!).score)
         viewModel = ViewModelProviders.of(this, viewModelFactory).get(ScoreViewModel::class.java)
-        binding.scoreText.text = viewModel.score.toString()
+        viewModel.score.observe(
+            viewLifecycleOwner,
+            Observer { score -> binding.scoreText.text = score.toString() })
+        binding.playAgainButton.setOnClickListener { viewModel.onClickPlayAgain() }
+        viewModel.eventPlayAgain.observe(
+            viewLifecycleOwner,
+            Observer { playAgain ->
+                if (playAgain) {
+                    findNavController().navigate(ScoreFragmentDirections.actionRestart())
+                    viewModel.onEventPlayAgainComplete()
+                }
+            })
         return binding.root
     }
 }
