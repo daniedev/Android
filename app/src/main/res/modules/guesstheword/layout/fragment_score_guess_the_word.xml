@@ -3,6 +3,12 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools">
 
+    <data>
+        <variable
+            name="viewModel"
+            type="com.mobileapp.learnkotlin.codelabs.guesstheword.screens.score.ScoreViewModel" />
+    </data>
+
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/score_layout"
         android:layout_width="match_parent"
@@ -33,6 +39,7 @@
             android:layout_marginTop="16dp"
             android:layout_marginBottom="8dp"
             android:fontFamily="sans-serif"
+            android:text="@{@string/score_format_score_only(viewModel.score)}"
             android:textColor="@color/guess_the_word_black_text_color"
             android:textSize="34sp"
             android:textStyle="normal"
@@ -52,6 +59,7 @@
             android:text="@string/guess_the_word_play_again"
             android:theme="@style/GoButton"
             android:visibility="visible"
+            android:onClick="@{() -> viewModel.onClickPlayAgain()}"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent" />

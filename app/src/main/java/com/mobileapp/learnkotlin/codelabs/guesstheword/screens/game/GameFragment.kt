@@ -31,27 +31,12 @@ class GameFragment : Fragment() {
             false
         )
         viewModel = ViewModelProviders.of(this).get(GameViewModel::class.java)
-        viewModel.score.observe(
-            viewLifecycleOwner,
-            Observer { newScore -> binding.scoreText.text = newScore.toString() })
-        viewModel.word.observe(
-            viewLifecycleOwner,
-            Observer { newWord -> binding.wordText.text = newWord })
+        binding.viewModel = viewModel
+        binding.lifecycleOwner = viewLifecycleOwner
         viewModel.eventGameFinish.observe(
             viewLifecycleOwner,
             Observer { hasFinished -> if (hasFinished) endGame() })
-        binding.skipButton.setOnClickListener { onSkip() }
-        binding.correctButton.setOnClickListener { onCorrect() }
-        binding.endGameButton.setOnClickListener { endGame() }
         return binding.root
-    }
-
-    private fun onSkip() {
-        viewModel.onSkip()
-    }
-
-    private fun onCorrect() {
-        viewModel.onCorrect()
     }
 
     private fun endGame() {
