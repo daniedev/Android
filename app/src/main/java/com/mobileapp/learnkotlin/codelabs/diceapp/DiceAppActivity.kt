@@ -24,12 +24,12 @@ class DiceAppActivity : AppCompatActivity() {
     private fun rollDice() {
         Toast.makeText(this, "dice rolled", Toast.LENGTH_SHORT).show()
         val drawableResource = when (generateRandomNumber()) {
-            1 -> R.drawable.dice_1
-            2 -> R.drawable.dice_2
-            3 -> R.drawable.dice_3
-            4 -> R.drawable.dice_4
-            5 -> R.drawable.dice_5
-            else -> R.drawable.dice_6
+            1 -> R.drawable.ic_dice_1
+            2 -> R.drawable.ic_dice_2
+            3 -> R.drawable.ic_dice_3
+            4 -> R.drawable.ic_dice_4
+            5 -> R.drawable.ic_dice_5
+            else -> R.drawable.ic_dice_6
         }
         numberToBeDisplayed.setImageResource(drawableResource)
     }

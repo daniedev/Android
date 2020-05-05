@@ -11,7 +11,8 @@
         android:theme="@style/AppTheme">
         <activity android:name="com.mobileapp.learnkotlin.codelabs.androidtrivia.AndroidTriviaActivity"></activity>
         <activity android:name="com.mobileapp.learnkotlin.codelabs.constraintlayout.ColorMyViewsAppActivity" />
-        <activity android:name=".LauncherActivity">
+        <activity android:name=".LauncherActivity"
+                    android:theme="@style/Theme.MaterialComponents.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -19,6 +20,7 @@
             </intent-filter>
         </activity>
         <activity android:name="com.mobileapp.learnkotlin.codelabs.diceapp.DiceAppActivity" />
+        <activity android:name=".codelabs.guesstheword.GuessTheWordActivity" />
 
         <meta-data
             android:name="preloaded_fonts"

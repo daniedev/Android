@@ -12,4 +12,14 @@
     <color name="android_trivia_youWinBackground">#B7F8C9</color>
     <color name="android_trivia_gameOverBackground">#f8bbd0</color>
 
+    <!-- guess the word colors -->
+    <color name="guess_the_word_ok_green_color">#6ab343</color>
+    <color name="guess_the_word_selected_green_color">#388310</color>
+    <color name="guess_the_word_skip_red_color">#f44336</color>
+    <color name="guess_the_word_selected_red_color">#ba000d</color>
+    <color name="guess_the_word_black_text_color">#de000000</color>
+    <color name="guess_the_word_grey_text_color">#99000000</color>
+    <color name="guess_the_word_grey_button_color">#606060</color>
+    <color name="guess_the_word_white_text_color">#ffffff</color>
+
 </resources>

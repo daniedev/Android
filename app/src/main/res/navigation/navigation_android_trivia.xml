@@ -7,32 +7,32 @@
 
     <fragment
         android:id="@+id/aboutFragment"
-        android:name="com.mobileapp.learnkotlin.codelabs.androidtrivia.AboutFragment"
+        android:name="com.mobileapp.learnkotlin.codelabs.androidtrivia.screens.AboutFragment"
         android:label="AboutFragment"
-        tools:layout="@layout/fragment_about">
+        tools:layout="@layout/fragment_about_android_trivia">
     </fragment>
 
     <fragment
         android:id="@+id/rulesFragment"
-        android:name="com.mobileapp.learnkotlin.codelabs.androidtrivia.RulesFragment"
+        android:name="com.mobileapp.learnkotlin.codelabs.androidtrivia.screens.RulesFragment"
         android:label="RulesFragment"
-        tools:layout="@layout/fragment_rules">
+        tools:layout="@layout/fragment_rules_android_trivia">
     </fragment>
 
     <fragment
         android:id="@+id/titleFragment"
-        android:name="com.mobileapp.learnkotlin.codelabs.androidtrivia.TitleFragment"
+        android:name="com.mobileapp.learnkotlin.codelabs.androidtrivia.screens.TitleFragment"
         android:label="TitleFragment"
-        tools:layout="@layout/fragment_title">
+        tools:layout="@layout/fragment_title_android_trivia">
         <action
             android:id="@+id/action_titleFragment_to_gameFragment"
             app:destination="@id/gameFragment" />
     </fragment>
     <fragment
         android:id="@+id/gameFragment"
-        android:name="com.mobileapp.learnkotlin.codelabs.androidtrivia.GameFragment"
+        android:name="com.mobileapp.learnkotlin.codelabs.androidtrivia.screens.GameFragment"
         android:label="GameFragment"
-        tools:layout="@layout/fragment_game">
+        tools:layout="@layout/fragment_game_android_trivia">
         <action
             android:id="@+id/action_gameFragment_to_gameWonFragment"
             app:destination="@id/gameWonFragment"
@@ -46,20 +46,26 @@
     </fragment>
     <fragment
         android:id="@+id/gameWonFragment"
-        android:name="com.mobileapp.learnkotlin.codelabs.androidtrivia.GameWonFragment"
+        android:name="com.mobileapp.learnkotlin.codelabs.androidtrivia.screens.GameWonFragment"
         android:label="GameWonFragment"
-        tools:layout="@layout/fragment_game_won">
+        tools:layout="@layout/fragment_game_won_android_trivia">
         <action
             android:id="@+id/action_gameWonFragment_to_gameFragment"
             app:destination="@id/gameFragment"
             app:popUpTo="@id/titleFragment"
             app:popUpToInclusive="false" />
+        <argument
+            android:name="numQuestions"
+            app:argType="integer" />
+        <argument
+            android:name="numCorrect"
+            app:argType="integer" />
     </fragment>
     <fragment
         android:id="@+id/gameOverFragment"
-        android:name="com.mobileapp.learnkotlin.codelabs.androidtrivia.GameOverFragment"
+        android:name="com.mobileapp.learnkotlin.codelabs.androidtrivia.screens.GameOverFragment"
         android:label="GameOverFragment"
-        tools:layout="@layout/fragment_game_over">
+        tools:layout="@layout/fragment_game_over_android_trivia">
         <action
             android:id="@+id/action_gameOverFragment_to_gameFragment"
             app:destination="@id/gameFragment"

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="quote_format">\"%s\"</string>
+    <string name="score_format">Current Score : %d</string>
+    <string name="score_format_score_only">%d</string>
+</resources>

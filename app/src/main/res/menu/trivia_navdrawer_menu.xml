@@ -5,9 +5,9 @@
     <item
         android:title="@string/android_trivia_rules"
         android:id="@+id/rulesFragment"
-        android:icon="@drawable/android_trivia_rules"/>
+        android:icon="@drawable/ic_rules_android_trivia"/>
     <item
         android:id="@+id/aboutFragment"
-        android:icon="@drawable/android_trivia_about_android_trivia"
+        android:icon="@drawable/ic_about_android_trivia"
         android:title="@string/android_trivia_about" />
 </menu>

@@ -4,6 +4,8 @@ apply plugin: 'kotlin-android'
 
 apply plugin: 'kotlin-android-extensions'
 
+apply plugin: 'androidx.navigation.safeargs'
+
 android {
     compileSdkVersion 29
     buildToolsVersion "29.0.0"
@@ -24,6 +26,16 @@ android {
     dataBinding {
         enabled = true
     }
+
+    sourceSets {
+        main {
+            res.srcDirs = [
+                    file("src/main/res/modules/").listFiles(),
+                    "src/main/res/modules",
+                    "src/main/res"
+            ]
+        }
+    }
 }
 
 dependencies {
@@ -39,5 +51,6 @@ dependencies {
     implementation "android.arch.navigation:navigation-fragment-ktx:$navigationVersion"
     implementation "android.arch.navigation:navigation-ui-ktx:$navigationVersion"
     implementation "com.google.android.material:material:$supportlibVersion"
+    implementation 'androidx.lifecycle:lifecycle-extensions:2.2.0'
 
 }
