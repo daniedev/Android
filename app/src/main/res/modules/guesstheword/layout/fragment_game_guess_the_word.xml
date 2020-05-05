@@ -58,6 +58,7 @@
             android:layout_marginStart="8dp"
             android:layout_marginEnd="8dp"
             android:layout_marginBottom="8dp"
+            android:text="@{viewModel.currentTimeString}"
             android:fontFamily="sans-serif"
             android:textColor="@color/guess_the_word_grey_text_color"
             android:textSize="14sp"
