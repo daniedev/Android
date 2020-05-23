@@ -9,10 +9,11 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name="com.mobileapp.learnkotlin.codelabs.androidtrivia.AndroidTriviaActivity"></activity>
+        <activity android:name="com.mobileapp.learnkotlin.codelabs.androidtrivia.AndroidTriviaActivity" />
         <activity android:name="com.mobileapp.learnkotlin.codelabs.constraintlayout.ColorMyViewsAppActivity" />
-        <activity android:name=".LauncherActivity"
-                    android:theme="@style/Theme.MaterialComponents.NoActionBar">
+        <activity
+            android:name=".LauncherActivity"
+            android:theme="@style/Theme.MaterialComponents.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -21,6 +22,9 @@
         </activity>
         <activity android:name="com.mobileapp.learnkotlin.codelabs.diceapp.DiceAppActivity" />
         <activity android:name=".codelabs.guesstheword.GuessTheWordActivity" />
+        <activity
+            android:name=".codelabs.trackmysleepquality.TrackMySleepQualtiyActivity"
+            android:theme="@style/TrackMySleepTrackerAppTheme" />
 
         <meta-data
             android:name="preloaded_fonts"

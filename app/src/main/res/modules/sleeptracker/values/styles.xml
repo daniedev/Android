@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="TrackMySleepTrackerAppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <item name="colorPrimary">@color/trackMySleepColorPrimary</item>
+        <item name="colorPrimaryDark">@color/trackMySleepColorPrimaryDark</item>
+        <item name="colorAccent">@color/trackMySleepColorAccent</item>
+    </style>
+
+    <!-- Basic styling for the buttons. -->
+    <style name="SleepButtons" parent="Widget.AppCompat.Button.Colored">
+        <item name="android:textColor">@color/trackMySleep_white_text_color</item>
+        <item name="colorAccent">@color/trackMySleep_green_color</item>
+        <item name="colorControlHighlight">@color/trackMySleep_green_color</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+</resources>

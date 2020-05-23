@@ -9,6 +9,7 @@ import com.mobileapp.learnkotlin.codelabs.guesstheword.GuessTheWordActivity
 import com.mobileapp.learnkotlin.codelabs.androidtrivia.AndroidTriviaActivity
 import com.mobileapp.learnkotlin.codelabs.constraintlayout.ColorMyViewsAppActivity
 import com.mobileapp.learnkotlin.codelabs.diceapp.DiceAppActivity
+import com.mobileapp.learnkotlin.codelabs.trackmysleepquality.TrackMySleepQualtiyActivity
 import com.mobileapp.learnkotlin.databinding.ActivityLauncherBinding
 
 class LauncherActivity : AppCompatActivity() {
@@ -29,6 +30,10 @@ class LauncherActivity : AppCompatActivity() {
             )
             R.id.trivia_launch_button -> Intent(this, AndroidTriviaActivity::class.java)
             R.id.guess_the_word_launch_button -> Intent(this, GuessTheWordActivity::class.java)
+            R.id.track_my_sleep_quality_launch_button -> Intent(
+                this,
+                TrackMySleepQualtiyActivity::class.java
+            )
             else -> null
         }
         startActivity(nextPage)

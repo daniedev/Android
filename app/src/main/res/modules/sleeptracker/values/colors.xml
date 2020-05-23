@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="trackMySleepColorPrimary">#6ab343</color>
+    <color name="trackMySleepColorPrimaryDark">#388310</color>
+    <color name="trackMySleepColorAccent">#6ab343</color>
+
+    <color name="trackMySleep_green_color">#388310</color>
+    <color name="trackMySleep_white_text_color">#f0f0f0</color>
+
+</resources>
