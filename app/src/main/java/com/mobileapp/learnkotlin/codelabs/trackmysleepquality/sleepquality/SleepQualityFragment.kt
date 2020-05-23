@@ -6,7 +6,11 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.Fragment
+import androidx.lifecycle.Observer
+import androidx.lifecycle.ViewModelProviders
+import androidx.navigation.fragment.findNavController
 import com.mobileapp.learnkotlin.R
+import com.mobileapp.learnkotlin.codelabs.trackmysleepquality.database.SleepDatabase
 import com.mobileapp.learnkotlin.databinding.FragmentSleepQualityBinding
 
 /**
@@ -31,9 +35,20 @@ class SleepQualityFragment : Fragment() {
         val binding: FragmentSleepQualityBinding = DataBindingUtil.inflate(
             inflater, R.layout.fragment_sleep_quality, container, false
         )
-
         val application = requireNotNull(this.activity).application
+        val arguments = SleepQualityFragmentArgs.fromBundle(arguments!!)
+        val dataSource = SleepDatabase.getInstance(application).sleepDatabaseDao
+        val viewModelFactory = SleepQualityViewModelFactory(arguments.sleepNightKey, dataSource)
+        val viewModel =
+            ViewModelProviders.of(this, viewModelFactory).get(SleepQualityViewModel::class.java)
+        binding.viewModel = viewModel
 
+        viewModel.navigateToSleepTracker.observe(viewLifecycleOwner, Observer {
+            if (it == true) {
+                findNavController().navigate(SleepQualityFragmentDirections.actionSleepQualityFragmentToSleepTrackerFragment())
+                viewModel.doneNavigating()
+            }
+        })
         return binding.root
     }
 }
